@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* GRID */
+
+.grid {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  background-image:
+    linear-gradient(#00f7ff1a 1px, transparent 1px),
+    linear-gradient(90deg, #00f7ff1a 1px, transparent 1px);
+
+  background-size: 50px 50px;
+
+  animation: gridMove 15s linear infinite;
+
+  z-index: -1;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+/* MATRIX */
+
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 10%;
+
+  background: black;
+
+  position: sticky;
+  top: 0;
+
+  border-bottom: 1px solid #00f7ff33;
+
+  z-index: 10;
+}
+
+.logo {
+  color: #00f7ff;
+  letter-spacing: 2px;
+}
+
+/* NAV */
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #00f7ff;
+}
+
+nav a:hover {
+  text-shadow: 0 0 10px #00f7ff;
+}
+
+/* HERO */
+
+.hero {
+  height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* GLITCH */
+
+.glitch {
+  font-size: 3rem;
+  color: #00f7ff;
+
+  animation: glitch 1.5s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px red;
+  }
+  25% {
+    text-shadow: -2px 2px blue;
+  }
+  50% {
+    text-shadow: 2px -2px red;
+  }
+  75% {
+    text-shadow: -2px -2px blue;
+  }
+  100% {
+    text-shadow: 2px 2px red;
+  }
+}
+
+/* BUTTON */
+
+.btn {
+  display: inline-block;
+
+  padding: 14px 25px;
+
+  margin-top: 20px;
+
+  background: #00f7ff;
+  color: black;
+
+  text-decoration: none;
+
+  border-radius: 6px;
+
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 20px #00f7ff;
+  transform: scale(1.05);
+}
+
+/* CONTENT BOX */
+
+.content-box {
+  background: rgba(0, 0, 0, 0.8);
+
+  padding: 80px 10%;
+
+  margin: 60px auto;
+
+  border-radius: 10px;
+}
+
+/* PROJECTS */
+
+.project-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 30px;
+}
+
+.card {
+  background: #0e0e0e;
+
+  padding: 30px;
+
+  border: 1px solid #00f7ff33;
+
+  border-radius: 10px;
+
+  transition: 0.4s;
+
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: rotateY(10deg) rotateX(10deg) translateY(-10px);
+
+  box-shadow: 0 0 25px #00f7ff;
+}
+
+.card h3 {
+  color: #00f7ff;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #bbb;
+}
+
+/* SKILLS */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-top: 20px;
+}
+
+.skills li {
+  list-style: none;
+
+  border: 1px solid #00f7ff;
+
+  padding: 10px 20px;
+
+  border-radius: 5px;
+}
+
+.skills li:hover {
+  background: #00f7ff;
+  color: black;
+}
+
+/* CURSOR */
+
+.cursor-glow {
+  position: fixed;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  background: #00f7ff;
+
+  pointer-events: none;
+
+  box-shadow:
+    0 0 20px #00f7ff,
+    0 0 40px #00f7ff;
+
+  transform: translate(-50%, -50%);
+}
+
+/* ROBOT */
+
+.robot-chat {
+  position: fixed;
+
+  bottom: 20px;
+  right: 20px;
+
+  background: #00f7ff;
+
+  color: black;
+
+  padding: 15px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+  box-shadow: 0 0 20px #00f7ff;
+}
+
+/* TERMINAL */
+
+#terminal {
+  position: fixed;
+
+  width: 100%;
+  height: 100%;
+
+  background: black;
+
+  color: #00f7ff;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-family: monospace;
+
+  z-index: 999;
+
+  animation: terminalFade 3s forwards;
+}
+
+@keyframes terminalFade {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* SCROLL ANIMATION */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

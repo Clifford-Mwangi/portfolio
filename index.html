@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cliff | Full Stack Developer</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="terminal">
+      <p>> Initializing developer profile...</p>
+      <p>> Loading projects...</p>
+      <p></p>
+    </div>
+
+    <div class="grid"></div>
+    <canvas id="matrix"></canvas>
+
+    <header>
+      <h1 class="logo">CLIFFORD MWANGI</h1>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2 class="glitch">JUNIOR FULL STACK DEVELOPER</h2>
+
+      <p>I build modern web applications, APIs, and automation tools.</p>
+
+      <a href="#projects" class="btn">View Projects</a>
+    </section>
+
+    <section id="about" class="reveal content-box">
+      <h2>About Me</h2>
+
+      <p>
+        A junior full stack developer focused on building real-world
+        applications. I work with APIs, backend services, payment integrations,
+        and modern frontend tools.
+      </p>
+
+      <a href="assets/resume.pdf" class="btn">View Resume</a>
+      <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
+    </section>
+
+    <section id="projects" class="reveal content-box">
+      <h2>Projects</h2>
+
+      <div class="project-grid">
+        <!-- Billing System -->
+
+        <div
+          class="card"
+          style="
+            background: rgba(0, 0, 0, 0.75);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(6px);
+          "
+        >
+          <h3>Network Billing System</h3>
+
+          <p>
+            Automated billing and authentication system built for
+            <strong>MikroTik RouterOS</strong> networks. The system handles user
+            authentication, payment verification, and network access control
+            using backend logic and router API communication.
+          </p>
+
+          <p style="font-size: 0.9rem; opacity: 0.9">
+            <strong>Tech Stack:</strong><br />
+            HTML • CSS • JavaScript • Node.js • Express • MongoDB • RESTful APIs
+            Networking • MikroTik RouterOS • Router API • AP Bridge
+            configuration
+          </p>
+
+          <div
+            style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap"
+          >
+            <a
+              href="https://github.com/Clifford-Mwangi/mikrotik-mpesa-billing"
+              class="btn"
+              style="transition: 0.3s"
+            >
+              GitHub Repository
+            </a>
+          </div>
+        </div>
+
+        <!-- Jaza Chwani -->
+
+        <div
+          class="card"
+          style="
+            background: rgba(0, 0, 0, 0.75);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(6px);
+          "
+        >
+          <h3>Jaza Chwani – Guessing Game</h3>
+
+          <p>
+            Interactive number-guessing game where players attempt to guess a
+            hidden number. The game integrates with
+            <strong>Safaricom M-Pesa Daraja API</strong> to simulate a payment
+            system for participating in the game.
+          </p>
+
+          <p style="font-size: 0.9rem; opacity: 0.9">
+            <strong>Tech Stack:</strong><br />
+            HTML • CSS • JavaScript • Node.js • Express RESTful APIs • Safaricom
+            M-Pesa Daraja API GitHub Pages • Render
+          </p>
+
+          <div
+            style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap"
+          >
+            <a
+              href="https://clifford-mwangi.github.io/GUESS-MY-NUMBER-GAME/"
+              class="btn"
+              style="transition: 0.3s"
+            >
+              Live Demo
+            </a>
+
+            <a
+              href="https://github.com/Clifford-Mwangi/GUESS-BACKEND"
+              class="btn"
+              style="transition: 0.3s"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Upwork Writers -->
+
+        <div
+          class="card"
+          style="
+            background: rgba(0, 0, 0, 0.75);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(6px);
+          "
+        >
+          <h3>Upwork Writers Platform</h3>
+
+          <p>
+            Web platform designed to connect skilled freelance writers with
+            writing opportunities. Built with a backend architecture capable of
+            handling requests, routing, and scalable service logic.
+          </p>
+
+          <p style="font-size: 0.9rem; opacity: 0.9">
+            <strong>Tech Stack:</strong><br />
+            HTML • CSS • JavaScript • Node.js • Express MongoDB • RESTful APIs •
+            Backend routing Render Cloud Hosting
+          </p>
+
+          <div
+            style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap"
+          >
+            <a
+              href="https://upwork-writers.onrender.com/"
+              class="btn"
+              style="transition: 0.3s"
+            >
+              Live Platform
+            </a>
+
+            <a
+              href="https://github.com/Clifford-Mwangi/upwork-writers"
+              class="btn"
+              style="transition: 0.3s"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="reveal content-box">
+      <h2>Skills</h2>
+
+      <ul class="skills">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Responsive Design</li>
+        <li>CSS Animations</li>
+        <li>JavaScript(ES6)</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>RESTful API Development</li>
+        <li>MongoDB</li>
+        <li>Database Intergration</li>
+        <li>Git & Github</li>
+        <li>Github pages Hosting</li>
+        <li>Render Cloud Hosting</li>
+        <li>Safaricom M-Pesa Daraja API</li>
+        <li>API Intergration</li>
+        <li>Mikrotik RouterOS</li>
+        <li>Network Authentication Systems</li>
+        <li>Router API integrations</li>
+        <li>AP-Bridge Networking</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="reveal content-box">
+      <h2>Contact</h2>
+
+      <p>Email: cliffordmwangi924@gmail.com</p>
+      <p>GitHub: github.com/Clifford-Mwangi</p>
+      ;
+    </section>
+
+    <div class="cursor-glow"></div>
+
+    <div class="robot-chat">🤖 Welcome to Clifford's developer portfolio</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
