@@ -320,3 +320,64 @@ nav a:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* =========================
+   MOBILE & TOUCH IMPROVEMENTS
+   ========================= */
+
+/* Mobile-friendly header */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 15px; /* Space between items */
+    align-items: center;
+  }
+
+  nav li {
+    font-size: 1.2rem; /* Bigger font for readability */
+    padding: 5px 0; /* Padding around items */
+  }
+
+  nav {
+    padding: 15px 0; /* Add breathing room */
+  }
+}
+
+/* Desktop header spacing tweak */
+nav ul {
+  gap: 25px; /* Space between menu items */
+}
+
+nav li {
+  padding: 5px 10px; /* Padding for clickable area */
+  transition: all 0.3s ease; /* Smooth hover effects */
+}
+
+/* Cyber-tech glow effect on hover/focus */
+nav li:hover,
+nav li:focus {
+  text-shadow:
+    0 0 10px #00ffea,
+    0 0 20px #00ffea,
+    0 0 30px #00ffea;
+  color: #00ffea;
+}
+
+/* Make sure links/buttons are touch-friendly */
+button,
+a.btn {
+  touch-action: manipulation; /* Fixes tap delay on mobile */
+}
+
+/* Smooth scrolling for touch devices */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Smooth inertia scrolling for iOS */
+}
+
+/* Optional: slightly more space around sections on mobile for readability */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 50px 20px; /* Top-bottom 50px, sides 20px */
+  }
+}
