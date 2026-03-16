@@ -381,3 +381,52 @@ html {
     padding: 50px 20px; /* Top-bottom 50px, sides 20px */
   }
 }
+
+/* =========================
+   FORCE INLINE HEADER ON MOBILE
+   ========================= */
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between; /* Title left, nav right */
+    align-items: center;
+    padding: 10px 15px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+
+  header h1 {
+    font-size: 1.3rem; /* Shrink slightly for mobile */
+    white-space: nowrap; /* Never break into two lines */
+    overflow: hidden; /* Avoid overflow issues */
+    text-overflow: ellipsis; /* Show ... if screen is extremely narrow */
+    margin: 0;
+  }
+
+  nav {
+    flex: 1; /* Take remaining space */
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row; /* Keep inline */
+    justify-content: flex-end; /* Align menu items to right */
+    gap: 10px; /* Space between items */
+    flex-wrap: nowrap; /* Prevent stacking */
+    overflow-x: auto; /* Allow horizontal scroll if needed */
+  }
+
+  nav li {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  nav a {
+    padding: 5px 8px;
+    white-space: nowrap; /* Menu text never wraps */
+  }
+
+  /* Optional: hide scrollbar but still scrollable on tiny screens */
+  nav ul::-webkit-scrollbar {
+    display: none;
+  }
+}
