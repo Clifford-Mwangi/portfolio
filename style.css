@@ -322,111 +322,41 @@ nav a:hover {
 }
 
 /* =========================
-   MOBILE & TOUCH IMPROVEMENTS
-   ========================= */
-
-/* Mobile-friendly header */
-@media screen and (max-width: 768px) {
-  nav ul {
-    flex-direction: column; /* Stack menu items vertically */
-    gap: 15px; /* Space between items */
-    align-items: center;
-  }
-
-  nav li {
-    font-size: 1.2rem; /* Bigger font for readability */
-    padding: 5px 0; /* Padding around items */
-  }
-
-  nav {
-    padding: 15px 0; /* Add breathing room */
-  }
-}
-
-/* Desktop header spacing tweak */
-nav ul {
-  gap: 25px; /* Space between menu items */
-}
-
-nav li {
-  padding: 5px 10px; /* Padding for clickable area */
-  transition: all 0.3s ease; /* Smooth hover effects */
-}
-
-/* Cyber-tech glow effect on hover/focus */
-nav li:hover,
-nav li:focus {
-  text-shadow:
-    0 0 10px #00ffea,
-    0 0 20px #00ffea,
-    0 0 30px #00ffea;
-  color: #00ffea;
-}
-
-/* Make sure links/buttons are touch-friendly */
-button,
-a.btn {
-  touch-action: manipulation; /* Fixes tap delay on mobile */
-}
-
-/* Smooth scrolling for touch devices */
-html {
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* Smooth inertia scrolling for iOS */
-}
-
-/* Optional: slightly more space around sections on mobile for readability */
-@media screen and (max-width: 768px) {
-  section {
-    padding: 50px 20px; /* Top-bottom 50px, sides 20px */
-  }
-}
-
-/* =========================
-   FORCE INLINE HEADER ON MOBILE
+   FINAL INLINE HEADER FIX
+   Fully horizontal on mobile & desktop
+   No stacking, no scroll, perfectly scaled
    ========================= */
 @media screen and (max-width: 768px) {
   header {
     display: flex;
     justify-content: space-between; /* Title left, nav right */
     align-items: center;
-    padding: 10px 15px;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    padding: 8px 10px; /* Less padding to fit */
   }
 
+  /* Shrink title enough to fit mobile screens */
   header h1 {
-    font-size: 1.3rem; /* Shrink slightly for mobile */
-    white-space: nowrap; /* Never break into two lines */
-    overflow: hidden; /* Avoid overflow issues */
-    text-overflow: ellipsis; /* Show ... if screen is extremely narrow */
+    font-size: 0.95rem; /* Smaller than before */
+    white-space: nowrap; /* Never break */
     margin: 0;
-  }
-
-  nav {
-    flex: 1; /* Take remaining space */
+    flex-shrink: 1; /* Allows shrinking if needed */
   }
 
   nav ul {
     display: flex;
-    flex-direction: row; /* Keep inline */
-    justify-content: flex-end; /* Align menu items to right */
-    gap: 10px; /* Space between items */
-    flex-wrap: nowrap; /* Prevent stacking */
-    overflow-x: auto; /* Allow horizontal scroll if needed */
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 6px; /* Minimal spacing between menu items */
+    flex-shrink: 1; /* Shrink if needed */
   }
 
   nav li {
-    font-size: 1rem;
+    font-size: 0.85rem; /* Slightly smaller nav text */
     padding: 0;
+    white-space: nowrap; /* Prevent wrapping */
   }
 
   nav a {
-    padding: 5px 8px;
-    white-space: nowrap; /* Menu text never wraps */
-  }
-
-  /* Optional: hide scrollbar but still scrollable on tiny screens */
-  nav ul::-webkit-scrollbar {
-    display: none;
+    padding: 3px 5px; /* Minimal padding for clickable area */
   }
 }
