@@ -103,8 +103,6 @@ nav a:hover {
 .glitch {
   font-size: 3rem;
   color: #00f7ff;
-
-  animation: glitch 1.5s infinite;
 }
 
 @keyframes glitch {
